@@ -54,9 +54,11 @@ public class DeptDao {
 			
 			// list값으로 반환
 		*/
+		
+		rs.close();
 		stmt.close();
 		conn.close();
-		return null;
+		return list;
 	}
 	// 
 }
