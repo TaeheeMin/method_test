@@ -25,7 +25,7 @@
 				<tr>
 					<td>pw</td>
 					<td>
-						<input type="text" name="id">
+						<input type="text" name="pw">
 					</td>
 				</tr>
 			</table>

@@ -2,6 +2,16 @@
 <%@ page import = "vo.*" %>
 <%@ page import = "service.*" %>
 <%
+	//1. 요정분석 : 로그인 사용할 아이디와 비밀번호 입력받아 사용
+	request.setCharacterEncoding("utf-8");
+	
+	// 작성 확인
+	if(request.getParameter("memberId") == null || request.getParameter("memberPw") == null || request.getParameter("memberId").equals("") || request.getParameter("memberPw").equals("")){
+		System.out.println("1.로그인실패");
+		response.sendRedirect(request.getContextPath()+"/loginForm.jsp");
+		return;
+	} // 내용 미입력시 메세지, 폼이동
+	
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	
